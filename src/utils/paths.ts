@@ -89,7 +89,7 @@ export function getAppDataDir(): string {
     case 'linux':
       return path.join(home, '.config', 'Antigravity');
     default:
-      return path.join(home, '.antigravity');
+      return path.join(home, '.antigravity-ide');
   }
 }
 
