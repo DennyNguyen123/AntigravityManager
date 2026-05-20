@@ -78,14 +78,14 @@ export function getAppDataDir(): string {
 
   if (isWsl()) {
     const winUser = getWindowsUser();
-    return `/mnt/c/Users/${winUser}/AppData/Roaming/Antigravity`;
+    return `/mnt/c/Users/${winUser}/AppData/Roaming/Antigravity IDE`;
   }
 
   switch (process.platform) {
     case 'darwin':
       return path.join(home, 'Library', 'Application Support', 'Antigravity');
     case 'win32':
-      return path.join(process.env.APPDATA || path.join(home, 'AppData', 'Roaming'), 'Antigravity');
+      return path.join(process.env.APPDATA || path.join(home, 'AppData', 'Roaming'), 'Antigravity IDE');
     case 'linux':
       return path.join(home, '.config', 'Antigravity');
     default:

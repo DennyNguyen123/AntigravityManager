@@ -500,7 +500,7 @@ export async function startAntigravity(useUri = true): Promise<void> {
 
   if (useUri) {
     logger.info('Using URI protocol to start...');
-    const uri = 'antigravity://oauth-success';
+    const uri = 'antigravity-ide://oauth-success';
 
     if (await openUri(uri)) {
       logger.info('Antigravity URI launch command sent');
